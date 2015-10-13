@@ -6,7 +6,10 @@ import 'ocLazyLoad';
 import 'common/core';
 import routing from 'common/utils/routing';
 
-let app = angular.module('demo', ['ui.router', 'oc.lazyLoad']);
+import MessageModule from 'app/messages/module';
+
+
+let app = angular.module('demo', ['ui.router', 'oc.lazyLoad', MessageModule.name]);
 
 app.config(routing(app));
 
@@ -20,7 +23,7 @@ app.config(['$urlRouterProvider', '$locationProvider', '$compileProvider', '$log
     // http://ng-perf.com/2014/10/24/simple-trick-to-speed-up-your-angularjs-app-load-time/
     $compileProvider.debugInfoEnabled(false);
   }
-  
+
   $ocLazyLoadProvider.config({
     debug: true
   });
