@@ -5,4 +5,8 @@ export class DashboardController {
     console.log('dashboard!');
   }
 
+  getMessage() {
+    return 'hi there!';
+  }
+
 }

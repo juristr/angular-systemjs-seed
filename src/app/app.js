@@ -6,10 +6,9 @@ import 'ocLazyLoad';
 import 'common/core';
 import routing from 'common/utils/routing';
 
-import MessageModule from 'app/messages/module';
+import dashboardsModule from 'app/dashboard/dashboard';
 
-
-let app = angular.module('demo', ['ui.router', 'oc.lazyLoad', MessageModule.name]);
+let app = angular.module('demo', ['ui.router', 'oc.lazyLoad', dashboardsModule.name]);
 
 app.config(routing(app));
 

@@ -10,9 +10,9 @@ import dashboardTemplate from './dashboards.tpl';
 function ConfigureModule($stateProvider){
   $stateProvider.state('dashboards', {
     url: '/dashboards',
-    templateUrl: dashboardTemplate.name,
-    controller: DashboardController,
-    controllerAs: 'dashboardCtrl'
+    templateUrl: dashboardTemplate.name
+    // controller: DashboardController,
+    // controllerAs: 'dashboardCtrl'
   });
 }
 
@@ -23,4 +23,5 @@ export default angular
     timeModule.name,
     dashboardTemplate.name
   ])
-  .config(ConfigureModule);
+  .config(ConfigureModule)
+  .controller('DashboardController', DashboardController);
