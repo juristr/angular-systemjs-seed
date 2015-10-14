@@ -1,4 +1,4 @@
-export default class MessageController {
+export class MessageController {
 
     constructor() {
         this.message = 'hi';
